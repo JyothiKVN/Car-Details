@@ -3,7 +3,7 @@ import { Navigate, Link } from "react-router-dom";
 function NavigationComponent(props: any) {
   return (
     <div className="navigationMenu">
-      <h1>Logo</h1>
+      <h3>Logo</h3>
       <ul className="navigationMenu">
         <li>
           <Link to="/">Home</Link>

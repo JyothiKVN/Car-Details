@@ -1,15 +1,23 @@
 import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import { imageUrls } from "../utils/constants";
 import CarCardComponent from "../components/carcard";
 import AddCarDetailsComponent from "../components/addcardetails";
 
+var allCarDetails = [];
+
 function HomeComponent(props: any) {
+  const dispatch = useDispatch();
   const [showAddCarDet, setShowAddCarDet] = useState(false);
   const [selectedModel, setSelectedModel] = useState("");
-  const closeAddForm = () => {
+  const closeAddForm = (carDetails) => {
+    allCarDetails.push(carDetails);
+    dispatch({ type: "UPDATE", payload: carDetails });
+    props.setData([...props.data, carDetails]);
     setShowAddCarDet(false);
   };
+
   return (
     <div>
       <div style={{ background: "#ccc" }}>

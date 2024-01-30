@@ -40,8 +40,4 @@ export const imageUrls: CARLOGOS[] = [
     name: "Toyota",
     url: "https://en.wikipedia.org/wiki/Toyota#/media/File:Toyota.svg",
   },
-  {
-    name: "BMW",
-    url: "https://en.wikipedia.org/wiki/BMW#/media/File:BMW_logo_(gray).svg",
-  },
 ];
